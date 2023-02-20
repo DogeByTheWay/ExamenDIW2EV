@@ -1,0 +1,17 @@
+.l-columns{
+    display: grid;
+
+    @each $media, $value in $medias {
+        $modificador:"";
+        @if($media!=""){
+            $modificador:"\\@#{$media}"
+        }
+        @media (min-width: $value) {  
+            @for $i from 1 to $max-columns + 1{
+                &--#{$i}#{$modificador}{
+                    grid-template-columns: repeat($i, 1fr);
+                }
+           }     
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@import
+'01_utilities/functions',
+'01_utilities/mixins',
+'01_utilities/variables';
+
+@import
+'02_base/reset';
+
+@import
+'03_layout/l-columns';
+
+@import 
+'04_components/c-rectangulo';
+
+@import
+'06_global/g--alineacion-texto';
+
+//sass --watch  .\scss\main.scss .\css\main.css
+//CTRL + SPACE asistente 

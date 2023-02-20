@@ -1,0 +1,14 @@
+@each $media, $value in $medias {
+    $modificador:"";
+    @if($media!=""){
+        $modificador:"\\@#{$media}"
+    }
+    @media (min-width: $value) {  
+        @each $key in getTextAlignKeys() {
+            .g--alineacion-texto-#{$key}#{$modificador} {
+                text-align: getTextAlign($key);
+            }
+        }     
+    }
+}
+  

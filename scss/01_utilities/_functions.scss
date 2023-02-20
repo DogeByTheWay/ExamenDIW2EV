@@ -1,0 +1,9 @@
+//Text-align
+
+@function getTextAlign($key) {
+    @return map-get($text-align,$key);
+}
+
+@function getTextAlignKeys() {
+    @return map-keys($text-align);
+}
